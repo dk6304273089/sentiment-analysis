@@ -1,0 +1,99 @@
+
+[2022-03-15 22:19:45,829: INFO: stage_01_get_data]: 
+********************
+[2022-03-15 22:19:45,830: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data started <<<<<
+[2022-03-15 22:19:45,831: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-15 22:19:45,833: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-03-15 22:19:45,833: INFO: common]: created directory at: data
+[2022-03-15 22:19:45,834: INFO: stage_01_get_data]: verifying the credentials
+[2022-03-15 22:19:46,786: ERROR: stage_01_get_data]: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 46, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 725, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2022-03-15 22:19:46,789: ERROR: stage_01_get_data]: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 65, in <module>
+    main(config_path=parsed_args.config,creditionals_path=parsed_args.credentials)
+  File "src/stage_01_get_data.py", line 55, in main
+    raise e
+  File "src/stage_01_get_data.py", line 46, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 725, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2022-03-15 22:20:23,690: INFO: stage_01_get_data]: 
+********************
+[2022-03-15 22:20:23,690: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data started <<<<<
+[2022-03-15 22:20:23,692: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-15 22:20:23,694: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-03-15 22:20:23,695: INFO: common]: created directory at: data
+[2022-03-15 22:20:23,695: INFO: stage_01_get_data]: verifying the credentials
+[2022-03-15 22:20:24,749: ERROR: stage_01_get_data]: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 46, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 725, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2022-03-15 22:20:24,751: ERROR: stage_01_get_data]: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 65, in <module>
+    main(config_path=parsed_args.config,creditionals_path=parsed_args.credentials)
+  File "src/stage_01_get_data.py", line 55, in main
+    raise e
+  File "src/stage_01_get_data.py", line 46, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 725, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2022-03-15 22:22:45,668: INFO: stage_01_get_data]: 
+********************
+[2022-03-15 22:22:45,668: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data started <<<<<
+[2022-03-15 22:22:45,670: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-15 22:22:45,672: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-03-15 22:22:45,672: INFO: common]: created directory at: data
+[2022-03-15 22:22:45,672: INFO: stage_01_get_data]: verifying the credentials
+[2022-03-15 22:22:46,588: ERROR: stage_01_get_data]: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 46, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 725, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2022-03-15 22:22:46,591: ERROR: stage_01_get_data]: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 65, in <module>
+    main(config_path=parsed_args.config,creditionals_path=parsed_args.credentials)
+  File "src/stage_01_get_data.py", line 55, in main
+    raise e
+  File "src/stage_01_get_data.py", line 46, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 725, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2022-03-15 22:25:07,114: INFO: stage_01_get_data]: 
+********************
+[2022-03-15 22:25:07,114: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data started <<<<<
+[2022-03-15 22:25:07,116: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-15 22:25:07,117: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-03-15 22:25:07,118: INFO: common]: created directory at: data
+[2022-03-15 22:25:07,118: INFO: stage_01_get_data]: verifying the credentials
+[2022-03-15 22:25:08,240: INFO: stage_01_get_data]: Started downloading the data
+[2022-03-15 22:25:08,449: INFO: stage_01_get_data]: Successfully saved the data in data\products.csv
+[2022-03-15 22:25:08,452: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data completed!<<<<<
+

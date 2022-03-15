@@ -1,0 +1,10 @@
+stages:
+  get_data:
+    cmd: python src/stage_01_get_data.py --config=configs/config.yaml --credentials=configs/credentials.yaml
+    deps:
+      - src/stage_01_get_data.py
+      - src/utils/common.py
+      - configs/config.yaml
+      - configs/credentials.yaml
+    outs:
+      - data/products.csv

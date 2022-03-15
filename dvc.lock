@@ -1,0 +1,21 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python src/stage_01_get_data.py --config=configs/config.yaml --credentials=configs/credentials.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: f5b6c86ec46ff217e9bdfb0ff62f0412
+      size: 117
+    - path: configs/credentials.yaml
+      md5: 5db30fedd64f6ea9e5891a86fa25bd45
+      size: 162
+    - path: src/stage_01_get_data.py
+      md5: dc08ceccce61be67f2beec51320728f2
+      size: 2645
+    - path: src/utils/common.py
+      md5: 7595376ffd237ef41a88ee9309a56c6f
+      size: 510
+    outs:
+    - path: data/products.csv
+      md5: 5d201c3460df191343f13daea60428b0
+      size: 89532

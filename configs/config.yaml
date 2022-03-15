@@ -3,5 +3,5 @@ filename : train.csv
 
 source_download_dir:
   data_dir: data
-  data_file: train.csv
+  data_file: products.csv
 
