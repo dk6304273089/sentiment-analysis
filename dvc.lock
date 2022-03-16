@@ -4,18 +4,37 @@ stages:
     cmd: python src/stage_01_get_data.py --config=configs/config.yaml --credentials=configs/credentials.yaml
     deps:
     - path: configs/config.yaml
-      md5: f5b6c86ec46ff217e9bdfb0ff62f0412
-      size: 117
+      md5: 10b819a6e424058c3bf8dc4fb719f2b8
+      size: 246
     - path: configs/credentials.yaml
       md5: 5db30fedd64f6ea9e5891a86fa25bd45
       size: 162
     - path: src/stage_01_get_data.py
-      md5: dc08ceccce61be67f2beec51320728f2
-      size: 2645
+      md5: 41ac5573d783f87cda137ab6adc3d351
+      size: 2621
     - path: src/utils/common.py
       md5: 7595376ffd237ef41a88ee9309a56c6f
       size: 510
     outs:
-    - path: data/products.csv
+    - path: data/extracted_data/products.csv
       md5: 5d201c3460df191343f13daea60428b0
       size: 89532
+  processing_data:
+    cmd: python src/stage_02_preprocessing.py --config=configs/config.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: 10b819a6e424058c3bf8dc4fb719f2b8
+      size: 246
+    - path: src/DictionaryUtils/company_tags.txt
+      md5: 1dde0407bf8beb8dc5eede03a6872957
+      size: 232
+    - path: src/DictionaryUtils/english_profanity_google.txt
+      md5: 280c0a9727d2bded00c5ab9010f88eba
+      size: 2854
+    - path: src/stage_02_preprocessing.py
+      md5: 576eb317c71bc6f5dfea5e86415acc59
+      size: 8992
+    outs:
+    - path: data/processed_data/processed.csv
+      md5: 9b26656c15d3b6bc0ac1d6c17b5314ac
+      size: 89658

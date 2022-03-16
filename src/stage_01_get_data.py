@@ -8,6 +8,7 @@ import argparse
 import logging
 import sys
 import boto3
+from io import StringIO
 from src.utils.common import read_yaml,create_directories
 
 STAGE = "Stage 01 Extracting Data"
@@ -28,17 +29,13 @@ def main(config_path,creditionals_path):
     #Getting Bucket Name in S3
     bucketname = config["bucketname"]
     filename = config["filename"]
-
+    # saving the extracted data in local_data_filepath
     local_data_dir = config["source_download_dir"]["data_dir"]
-    create_directories([local_data_dir])
-    #creating directory in data_filename_location
+    data_dir=config["source_download_dir"]["data_extract"]
+    full_directory=os.path.join(local_data_dir,data_dir)
+    create_directories([local_data_dir,full_directory])
     data_filename = config["source_download_dir"]["data_file"]
-    #saving the extracted data in local_data_filepath
-    local_data_filepath = os.path.join(local_data_dir, data_filename)
-    if sys.version_info[0] < 3:
-        from StringIO import StringIO  # Python 2.x
-    else:
-        from io import StringIO
+    local_data_filepath = os.path.join(full_directory, data_filename)
     try:
         logging.info("verifying the credentials")
         client = boto3.client('s3', aws_access_key_id=secret_key,

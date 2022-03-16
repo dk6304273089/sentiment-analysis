@@ -1,7 +1,13 @@
-bucketname : dheeraj-2
+bucketname : dheeraj-1
 filename : train.csv
 
 source_download_dir:
   data_dir: data
+  data_extract: extracted_data
   data_file: products.csv
+
+preprocessed:
+  data_dir: data
+  data_processed: processed_data
+  data_file: processed.csv
 
