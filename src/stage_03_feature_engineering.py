@@ -146,7 +146,7 @@ class feature_engineering:
             df['Rc'] = 0.0
             df['Rd'] = 0.0
             df['Rsc'] = 0.0
-            logging.info("Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}")
+            logging.info(" Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}")
             product_list = df['product'].unique()
             for product in product_list:
                 data = df[df['product'] == product]
@@ -155,7 +155,6 @@ class feature_engineering:
                     review = review.lower()
                     words = review.split()
                     unique_bag = unique_bag.union(set(words))
-
                 for indx in data.index:
                     review = data.at[indx, 'answer_option']
                     df.at[indx, 'Rp'] = self.polarity_sentiment(review)
@@ -163,7 +162,6 @@ class feature_engineering:
                     df.at[indx, 'Rd'] = self.service_tag(review)
                     df.at[indx, 'Rsc'] = self.slang_emoji_polarity_compoundscore(review)
                     df.at[indx, 'Rc'] = float(len(set(review.split()))) / float(len(unique_bag))
-
                 df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
             df.to_csv(feature_file,index=False)
             logging.info("Successfully saved the file in {}".format(feature_file))
