@@ -11,3 +11,9 @@ preprocessed:
   data_processed: processed_data
   data_file: processed.csv
 
+featured:
+  feature_dir: data
+  feature_processed: feature_processed
+  feature_file: feature.csv
+
+
