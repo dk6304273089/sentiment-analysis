@@ -4,7 +4,7 @@ stages:
     cmd: python src/stage_01_get_data.py --config=configs/config.yaml --credentials=configs/credentials.yaml
     deps:
     - path: configs/config.yaml
-      md5: 16864f6eb5b74420c25c5c1aba8b601f
+      md5: 076cd0ad7dad1761512a1f4b2b485ba5
       size: 351
     - path: configs/credentials.yaml
       md5: 5db30fedd64f6ea9e5891a86fa25bd45

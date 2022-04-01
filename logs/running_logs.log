@@ -746,3 +746,15 @@ LookupError:
 [2022-03-27 13:08:20,440: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
 [2022-03-27 13:08:20,440: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering completed!<<<<<
 
+[2022-04-01 19:27:01,759: INFO: stage_01_get_data]: 
+********************
+[2022-04-01 19:27:01,784: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data started <<<<<
+[2022-04-01 19:27:01,790: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-01 19:27:01,792: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-01 19:27:01,792: INFO: common]: created directory at: data
+[2022-04-01 19:27:01,792: INFO: common]: created directory at: data\extracted_data
+[2022-04-01 19:27:01,792: INFO: stage_01_get_data]: verifying the credentials
+[2022-04-01 19:27:06,305: INFO: stage_01_get_data]: Started downloading the data
+[2022-04-01 19:27:06,978: INFO: stage_01_get_data]: Successfully saved the data in data\extracted_data\products.csv
+[2022-04-01 19:27:06,981: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data completed!<<<<<
+

@@ -8,3 +8,12 @@ stages:
       - configs/credentials.yaml
     outs:
       - data/extracted_data/products.csv
+  preprocessing_data:
+    cmd: python src/stage_02_preprocessing.py --config=configs/config.yaml
+    deps:
+      - src/stage_02_preprocessing.py
+      - src/DictionaryUtils/company_tags.txt
+      - configs/config.yaml
+      - src/DictionaryUtils/english_profanity_google.txt
+    outs:
+      - data/processed_data/processed.csv
