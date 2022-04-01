@@ -17,7 +17,7 @@ import boto3
 from io import StringIO
 from src.utils.common import read_yaml,create_directories
 from copy import deepcopy
-STAGE = "Stage 02 Preprocessing Data"
+STAGE = "Stage 02 processing Data"
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'),

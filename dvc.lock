@@ -54,3 +54,22 @@ stages:
     - path: data/feature_processed/feature.csv
       md5: bb2db27af877f0e8da7aaffe36c61426
       size: 191897
+  preprocessing_data:
+    cmd: python src/stage_02_preprocessing.py --config=configs/config.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: 076cd0ad7dad1761512a1f4b2b485ba5
+      size: 351
+    - path: src/DictionaryUtils/company_tags.txt
+      md5: 1dde0407bf8beb8dc5eede03a6872957
+      size: 232
+    - path: src/DictionaryUtils/english_profanity_google.txt
+      md5: 280c0a9727d2bded00c5ab9010f88eba
+      size: 2854
+    - path: src/stage_02_preprocessing.py
+      md5: a05ba5924b8c797e30e8d6f2c6657ac9
+      size: 8989
+    outs:
+    - path: data/processed_data/processed.csv
+      md5: 9b26656c15d3b6bc0ac1d6c17b5314ac
+      size: 89658
