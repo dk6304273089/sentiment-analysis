@@ -84,3 +84,665 @@ Traceback (most recent call last):
   File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 725, in _make_api_call
     raise error_class(parsed_response, operation_name)
 botocore.errorfactory.NoSuchBucket: An error occurred (NoSuchBucket) when calling the GetObject operation: The specified bucket does not exist
+[2022-03-27 12:36:12,722: INFO: stage_01_get_data]: 
+********************
+[2022-03-27 12:36:12,769: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data started <<<<<
+[2022-03-27 12:36:12,785: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 12:36:12,785: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-03-27 12:36:12,785: INFO: common]: created directory at: data
+[2022-03-27 12:36:12,785: INFO: common]: created directory at: data\extracted_data
+[2022-03-27 12:36:12,785: INFO: stage_01_get_data]: verifying the credentials
+[2022-03-27 12:36:26,749: INFO: stage_01_get_data]: Started downloading the data
+[2022-03-27 12:36:30,296: INFO: stage_01_get_data]: Successfully saved the data in data\extracted_data\products.csv
+[2022-03-27 12:36:30,390: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data completed!<<<<<
+
+[2022-03-27 12:39:33,869: INFO: stage_03_feature_engineering]: 
+********************
+[2022-03-27 12:39:33,869: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering started <<<<<
+[2022-03-27 12:39:33,869: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 12:39:33,869: INFO: common]: created directory at: data\feature_processed
+[2022-03-27 12:39:33,916: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-03-27 12:39:50,830: ERROR: stage_03_feature_engineering]: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet.zip/wordnet/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_03_feature_engineering.py", line 165, in main
+    df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
+  File "src/stage_03_feature_engineering.py", line 102, in noun_score
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "src/stage_03_feature_engineering.py", line 102, in <listcomp>
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\stem\wordnet.py", line 45, in lemmatize
+    lemmas = wn._morphy(word, pos)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 86, in __load
+    raise e
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+[2022-03-27 12:39:50,986: ERROR: stage_03_feature_engineering]: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet.zip/wordnet/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_03_feature_engineering.py", line 180, in <module>
+    pre.main(config_path=parsed_args.config)
+  File "src/stage_03_feature_engineering.py", line 170, in main
+    raise e
+  File "src/stage_03_feature_engineering.py", line 165, in main
+    df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
+  File "src/stage_03_feature_engineering.py", line 102, in noun_score
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "src/stage_03_feature_engineering.py", line 102, in <listcomp>
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\stem\wordnet.py", line 45, in lemmatize
+    lemmas = wn._morphy(word, pos)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 86, in __load
+    raise e
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+[2022-03-27 12:51:05,739: INFO: stage_01_get_data]: 
+********************
+[2022-03-27 12:51:05,786: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data started <<<<<
+[2022-03-27 12:51:05,786: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 12:51:05,801: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-03-27 12:51:05,801: INFO: common]: created directory at: data
+[2022-03-27 12:51:05,801: INFO: common]: created directory at: data\extracted_data
+[2022-03-27 12:51:05,801: INFO: stage_01_get_data]: verifying the credentials
+[2022-03-27 12:51:15,648: INFO: stage_01_get_data]: Started downloading the data
+[2022-03-27 12:51:20,261: INFO: stage_01_get_data]: Successfully saved the data in data\extracted_data\products.csv
+[2022-03-27 12:51:20,277: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data completed!<<<<<
+
+[2022-03-27 12:54:22,916: INFO: stage_02_preprocessing]: 
+********************
+[2022-03-27 12:54:22,916: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Preprocessing Data started <<<<<
+[2022-03-27 12:54:22,932: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 12:54:22,932: INFO: common]: created directory at: data\processed_data
+[2022-03-27 12:54:23,010: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection started
+[2022-03-27 12:54:47,332: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection Ended
+[2022-03-27 12:54:47,332: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Started
+[2022-03-27 12:54:47,751: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Ended
+[2022-03-27 12:54:47,751: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Started
+[2022-03-27 12:54:48,237: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Ended
+[2022-03-27 12:54:48,237: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Started
+[2022-03-27 12:54:49,241: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Ended
+[2022-03-27 12:54:49,429: INFO: stage_02_preprocessing]: Completed all the Stages in preprocessing data was stored in data\processed_data\processed.csv
+[2022-03-27 12:54:49,429: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Preprocessing Data completed!<<<<<
+
+[2022-03-27 12:57:03,024: INFO: stage_03_feature_engineering]: 
+********************
+[2022-03-27 12:57:03,024: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering started <<<<<
+[2022-03-27 12:57:03,024: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 12:57:03,024: INFO: common]: created directory at: data\feature_processed
+[2022-03-27 12:57:03,042: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-03-27 12:57:17,945: ERROR: stage_03_feature_engineering]: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet.zip/wordnet/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_03_feature_engineering.py", line 165, in main
+    df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
+  File "src/stage_03_feature_engineering.py", line 102, in noun_score
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "src/stage_03_feature_engineering.py", line 102, in <listcomp>
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\stem\wordnet.py", line 45, in lemmatize
+    lemmas = wn._morphy(word, pos)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 86, in __load
+    raise e
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+[2022-03-27 12:57:17,977: ERROR: stage_03_feature_engineering]: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet.zip/wordnet/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_03_feature_engineering.py", line 180, in <module>
+    pre.main(config_path=parsed_args.config)
+  File "src/stage_03_feature_engineering.py", line 170, in main
+    raise e
+  File "src/stage_03_feature_engineering.py", line 165, in main
+    df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
+  File "src/stage_03_feature_engineering.py", line 102, in noun_score
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "src/stage_03_feature_engineering.py", line 102, in <listcomp>
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\stem\wordnet.py", line 45, in lemmatize
+    lemmas = wn._morphy(word, pos)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 86, in __load
+    raise e
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mwordnet[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('wordnet')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/wordnet[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+[2022-03-27 13:00:45,104: INFO: stage_03_feature_engineering]: 
+********************
+[2022-03-27 13:00:45,104: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering started <<<<<
+[2022-03-27 13:00:45,104: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 13:00:45,104: INFO: common]: created directory at: data\feature_processed
+[2022-03-27 13:00:45,119: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-03-27 13:00:59,487: ERROR: stage_03_feature_engineering]: 
+**********************************************************************
+  Resource [93momw-1.4[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('omw-1.4')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/omw-1.4[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93momw-1.4[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('omw-1.4')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/omw-1.4.zip/omw-1.4/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_03_feature_engineering.py", line 167, in main
+    df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
+  File "src/stage_03_feature_engineering.py", line 104, in noun_score
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "src/stage_03_feature_engineering.py", line 104, in <listcomp>
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\stem\wordnet.py", line 45, in lemmatize
+    lemmas = wn._morphy(word, pos)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 89, in __load
+    corpus = self.__reader_cls(root, *self.__args, **self.__kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\reader\wordnet.py", line 1176, in __init__
+    self.provenances = self.omw_prov()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\reader\wordnet.py", line 1285, in omw_prov
+    fileids = self._omw_reader.fileids()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 86, in __load
+    raise e
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93momw-1.4[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('omw-1.4')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/omw-1.4[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+[2022-03-27 13:00:59,491: ERROR: stage_03_feature_engineering]: 
+**********************************************************************
+  Resource [93momw-1.4[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('omw-1.4')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/omw-1.4[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93momw-1.4[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('omw-1.4')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/omw-1.4.zip/omw-1.4/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_03_feature_engineering.py", line 182, in <module>
+    pre.main(config_path=parsed_args.config)
+  File "src/stage_03_feature_engineering.py", line 172, in main
+    raise e
+  File "src/stage_03_feature_engineering.py", line 167, in main
+    df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
+  File "src/stage_03_feature_engineering.py", line 104, in noun_score
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "src/stage_03_feature_engineering.py", line 104, in <listcomp>
+    noun_tag.append([lemmatizer.lemmatize(token.lemma_) for token in doc if
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\stem\wordnet.py", line 45, in lemmatize
+    lemmas = wn._morphy(word, pos)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 89, in __load
+    corpus = self.__reader_cls(root, *self.__args, **self.__kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\reader\wordnet.py", line 1176, in __init__
+    self.provenances = self.omw_prov()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\reader\wordnet.py", line 1285, in omw_prov
+    fileids = self._omw_reader.fileids()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 121, in __getattr__
+    self.__load()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 86, in __load
+    raise e
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\corpus\util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\nltk\data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93momw-1.4[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('omw-1.4')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/omw-1.4[0m
+
+  Searched in:
+    - 'C:\\Users\\Dheeraj kumar/nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\share\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\anaconda3\\envs\\sentiment-analysis\\lib\\nltk_data'
+    - 'C:\\Users\\Dheeraj kumar\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+[2022-03-27 13:04:22,773: INFO: stage_03_feature_engineering]: 
+********************
+[2022-03-27 13:04:22,773: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering started <<<<<
+[2022-03-27 13:04:22,782: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 13:04:22,782: INFO: common]: created directory at: data\feature_processed
+[2022-03-27 13:04:22,782: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-03-27 13:05:50,210: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
+[2022-03-27 13:05:50,210: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering completed!<<<<<
+
+[2022-03-27 13:06:51,523: INFO: stage_03_feature_engineering]: 
+********************
+[2022-03-27 13:06:51,523: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering started <<<<<
+[2022-03-27 13:06:51,523: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 13:06:51,523: INFO: common]: created directory at: data\feature_processed
+[2022-03-27 13:06:51,538: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-03-27 13:08:20,440: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
+[2022-03-27 13:08:20,440: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering completed!<<<<<
+
