@@ -899,3 +899,94 @@ LookupError:
 [2022-04-03 15:44:59,235: INFO: stage_03_feature_engineering]: >>>>>> stage Stage 03 Feature Engineering Step completed!<<<<<<
 
 [2022-04-04 09:24:19,469: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 10:22:17,700: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 10:35:36,482: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 10:37:52,302: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-04 10:37:52,308: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 10:39:52,236: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-04 10:39:52,239: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 11:16:15,758: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 11:16:15,758: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 11:16:15,758: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 11:16:15,763: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 11:16:15,764: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 11:16:15,773: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 11:16:17,231: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 11:16:22,765: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 11:16:23,360: ERROR: stage_04_model_training]: Object of type ndarray is not JSON serializable
+Traceback (most recent call last):
+  File "src/stage_04_model_training.py", line 83, in main
+    json.dump(scores, f, indent=4)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+[2022-04-04 11:19:42,380: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 11:19:42,381: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 11:19:42,381: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 11:19:42,385: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 11:19:42,387: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 11:19:42,395: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 11:19:43,830: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 11:19:48,942: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 11:19:49,437: INFO: stage_04_model_training]: Successfully saved scores file in  report/scores.json
+[2022-04-04 11:19:49,655: INFO: stage_04_model_training]: Successfully saved model file in models\random_forest.joblib
+[2022-04-04 11:19:49,668: INFO: stage_04_model_training]: >>>>>> stage Stage 04 Model Training completed!<<<<<<
+
+[2022-04-04 11:21:41,061: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 11:21:41,061: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 11:21:41,062: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 11:21:41,066: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 11:21:41,068: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 11:21:41,076: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 11:21:42,541: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 11:21:47,640: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 11:21:48,109: INFO: stage_04_model_training]: Successfully saved scores file in  report/scores.json
+[2022-04-04 11:21:48,268: INFO: stage_04_model_training]: Successfully saved model file in models\random_forest.joblib
+[2022-04-04 11:21:48,281: INFO: stage_04_model_training]: >>>>>> stage Stage 04 Model Training completed!<<<<<<
+
+[2022-04-04 13:50:29,455: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 13:50:29,455: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 13:50:29,455: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 13:50:29,462: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 13:50:29,464: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 13:50:29,476: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 13:50:31,129: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 13:50:36,331: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 13:50:36,819: INFO: stage_04_model_training]: Successfully saved scores file in  report/scores.json
+[2022-04-04 13:50:36,923: INFO: stage_04_model_training]: Successfully saved model file in models\random_forest.joblib
+[2022-04-04 13:50:36,931: ERROR: stage_04_model_training]: name 'score_giver' is not defined
+Traceback (most recent call last):
+  File "src/stage_04_model_training.py", line 108, in main
+    score = score_giver(C, D)
+NameError: name 'score_giver' is not defined
+[2022-04-04 13:51:06,341: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 13:51:06,342: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 13:51:06,342: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 13:51:06,346: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 13:51:06,348: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 13:51:06,360: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 13:51:07,898: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 13:51:13,106: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 13:51:13,600: INFO: stage_04_model_training]: Successfully saved scores file in  report/scores.json
+[2022-04-04 13:51:13,826: INFO: stage_04_model_training]: Successfully saved model file in models\random_forest.joblib
+[2022-04-04 13:55:07,528: INFO: stage_04_model_training]: Successfully saved the rank file in data\feature_processed\rank.csv
+[2022-04-04 13:55:07,556: INFO: stage_04_model_training]: >>>>>> stage Stage 04 Model Training completed!<<<<<<
+

@@ -15,5 +15,11 @@ featured:
   feature_dir: data
   feature_processed: feature_processed
   feature_file: feature.csv
-
+  rank_file: rank.csv
+report:
+  params: report/params.json
+  scores: report/scores.json
+model:
+  dir: models
+  file_name: random_forest.joblib
 
