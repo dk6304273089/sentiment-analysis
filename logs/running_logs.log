@@ -790,3 +790,112 @@ LookupError:
 [2022-04-01 19:33:11,927: INFO: stage_02_preprocessing]: Completed all the Stages in preprocessing data was stored in data\processed_data\processed.csv
 [2022-04-01 19:33:11,927: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 processing Data completed!<<<<<
 
+[2022-04-01 19:36:35,684: INFO: stage_03_feature_engineering]: 
+********************
+[2022-04-01 19:36:35,685: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering started <<<<<
+[2022-04-01 19:36:35,688: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-01 19:36:35,688: INFO: common]: created directory at: data\feature_processed
+[2022-04-01 19:36:35,699: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-04-01 19:38:09,010: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
+[2022-04-01 19:38:09,010: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering completed!<<<<<
+
+[2022-04-01 19:38:22,897: INFO: stage_01_get_data]: 
+********************
+[2022-04-01 19:38:22,897: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data from S3Bucket started <<<<<
+[2022-04-01 19:38:22,900: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-01 19:38:22,902: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-01 19:38:22,902: INFO: common]: created directory at: data
+[2022-04-01 19:38:22,902: INFO: common]: created directory at: data\extracted_data
+[2022-04-01 19:38:22,902: INFO: stage_01_get_data]: verifying the credentials
+[2022-04-01 19:38:27,630: INFO: stage_01_get_data]: Started downloading the data
+[2022-04-01 19:38:28,285: INFO: stage_01_get_data]: Successfully saved the data in data\extracted_data\products.csv
+[2022-04-01 19:38:28,287: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data from S3Bucket completed!<<<<<
+
+[2022-04-01 19:39:34,266: INFO: stage_03_feature_engineering]: 
+********************
+[2022-04-01 19:39:34,266: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering Step started <<<<<
+[2022-04-01 19:39:34,269: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-01 19:39:34,270: INFO: common]: created directory at: data\feature_processed
+[2022-04-01 19:39:34,279: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-04-01 19:41:02,369: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
+[2022-04-01 19:41:02,370: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering Step completed!<<<<<
+
+[2022-04-01 19:41:18,661: INFO: stage_02_preprocessing]: 
+********************
+[2022-04-01 19:41:18,661: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 PreProcessing Data started <<<<<
+[2022-04-01 19:41:18,666: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-01 19:41:18,666: INFO: common]: created directory at: data\processed_data
+[2022-04-01 19:41:18,676: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection started
+[2022-04-01 19:41:41,285: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection Ended
+[2022-04-01 19:41:41,286: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Started
+[2022-04-01 19:41:41,685: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Ended
+[2022-04-01 19:41:41,685: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Started
+[2022-04-01 19:41:42,200: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Ended
+[2022-04-01 19:41:42,200: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Started
+[2022-04-01 19:41:43,006: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Ended
+[2022-04-01 19:41:43,016: INFO: stage_02_preprocessing]: Completed all the Stages in preprocessing data was stored in data\processed_data\processed.csv
+[2022-04-01 19:41:43,016: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 PreProcessing Data completed!<<<<<
+
+[2022-04-01 19:41:46,032: INFO: stage_01_get_data]: 
+********************
+[2022-04-01 19:41:46,032: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data from S3 Bucket started <<<<<
+[2022-04-01 19:41:46,035: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-01 19:41:46,037: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-01 19:41:46,037: INFO: common]: created directory at: data
+[2022-04-01 19:41:46,037: INFO: common]: created directory at: data\extracted_data
+[2022-04-01 19:41:46,037: INFO: stage_01_get_data]: verifying the credentials
+[2022-04-01 19:41:58,443: INFO: stage_01_get_data]: Started downloading the data
+[2022-04-01 19:41:59,033: INFO: stage_01_get_data]: Successfully saved the data in data\extracted_data\products.csv
+[2022-04-01 19:41:59,035: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data from S3 Bucket completed!<<<<<
+
+[2022-04-01 21:03:46,433: INFO: stage_02_preprocessing]: 
+********************
+[2022-04-01 21:03:46,455: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Processing Data started <<<<<
+[2022-04-01 21:03:46,472: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-01 21:03:46,472: INFO: common]: created directory at: data\processed_data
+[2022-04-01 21:03:46,793: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection started
+[2022-04-01 21:04:14,172: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection Ended
+[2022-04-01 21:04:14,173: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Started
+[2022-04-01 21:04:14,641: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Ended
+[2022-04-01 21:04:14,641: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Started
+[2022-04-01 21:04:15,498: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Ended
+[2022-04-01 21:04:15,498: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Started
+[2022-04-01 21:04:16,759: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Ended
+[2022-04-01 21:04:16,943: INFO: stage_02_preprocessing]: Completed all the Stages in preprocessing data was stored in data\processed_data\processed.csv
+[2022-04-01 21:04:16,943: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Processing Data completed!<<<<<
+
+[2022-04-03 15:34:38,657: INFO: stage_03_feature_engineering]: 
+********************
+[2022-04-03 15:34:38,706: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering Step started <<<<<
+[2022-04-03 15:34:38,774: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-03 15:34:38,775: INFO: common]: created directory at: data\feature_processed
+[2022-04-03 15:34:38,781: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-04-03 15:34:38,913: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
+[2022-04-03 15:34:38,913: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering Step completed!<<<<<
+
+[2022-04-03 15:38:55,082: INFO: stage_02_preprocessing]: 
+********************
+[2022-04-03 15:38:55,082: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Processing Data started <<<<<
+[2022-04-03 15:38:55,085: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-03 15:38:55,086: INFO: common]: created directory at: data\processed_data
+[2022-04-03 15:38:55,180: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection started
+[2022-04-03 15:39:20,206: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection Ended
+[2022-04-03 15:39:20,206: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Started
+[2022-04-03 15:39:20,897: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Ended
+[2022-04-03 15:39:20,897: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Started
+[2022-04-03 15:39:21,479: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Ended
+[2022-04-03 15:39:21,479: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Started
+[2022-04-03 15:39:22,664: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Ended
+[2022-04-03 15:39:23,030: INFO: stage_02_preprocessing]: Completed all the Stages in preprocessing data was stored in data\processed_data\processed.csv
+[2022-04-03 15:39:23,030: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Processing Data completed!<<<<<
+
+[2022-04-03 15:43:27,699: INFO: stage_03_feature_engineering]: 
+********************
+[2022-04-03 15:43:27,699: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering Step started <<<<<
+[2022-04-03 15:43:27,704: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-03 15:43:27,704: INFO: common]: created directory at: data\feature_processed
+[2022-04-03 15:43:27,712: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-04-03 15:44:59,234: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
+[2022-04-03 15:44:59,235: INFO: stage_03_feature_engineering]: >>>>>> stage Stage 03 Feature Engineering Step completed!<<<<<<
+
+[2022-04-04 09:24:19,469: INFO: common]: yaml file: configs/config.yaml loaded successfully

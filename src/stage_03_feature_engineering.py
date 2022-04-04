@@ -19,7 +19,7 @@ import argparse
 import logging
 from src.utils.common import read_yaml,create_directories
 
-STAGE = "Stage 03 Feature Engineering"
+STAGE = "Stage 03 Feature Engineering Step"
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'),
     level=logging.INFO,
@@ -142,12 +142,12 @@ class feature_engineering:
             feature_file_path=config["featured"]["feature_file"]
             feature_file=os.path.join(feature_dir,feature_file_path)
             df=pd.read_csv(file_path)
-            df['Rn'] = 0.0
-            df['Rp'] = 0.0
-            df['Rs'] = 0.0
-            df['Rc'] = 0.0
-            df['Rd'] = 0.0
-            df['Rsc'] = 0.0
+            df['Noun_Strength'] = 0.0
+            df['Review_Polarity'] = 0.0
+            df['Review_Subjectivity'] = 0.0
+            df['Review_Complexity'] = 0.0
+            df['Service_Tagger'] = 0.0
+            df['Compound_Score'] = 0.0
             logging.info(" Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}")
             product_list = df['product'].unique()
             for product in product_list:
@@ -159,12 +159,12 @@ class feature_engineering:
                     unique_bag = unique_bag.union(set(words))
                 for indx in data.index:
                     review = data.at[indx, 'answer_option']
-                    df.at[indx, 'Rp'] = self.polarity_sentiment(review)
-                    df.at[indx, 'Rs'] = self.subjectivity_sentiment(review)
-                    df.at[indx, 'Rd'] = self.service_tag(review)
-                    df.at[indx, 'Rsc'] = self.slang_emoji_polarity_compoundscore(review)
-                    df.at[indx, 'Rc'] = float(len(set(review.split()))) / float(len(unique_bag))
-                df.loc[df['product'] == product, 'Rn'] = self.noun_score(data['answer_option'].values).values
+                    df.at[indx, 'Review_Polarity'] = self.polarity_sentiment(review)
+                    df.at[indx, 'Review_Subjectivity'] = self.subjectivity_sentiment(review)
+                    df.at[indx, 'Service_Tagger'] = self.service_tag(review)
+                    df.at[indx, 'Compound_Score'] = self.slang_emoji_polarity_compoundscore(review)
+                    df.at[indx, 'Review_Complexity'] = float(len(set(review.split()))) / float(len(unique_bag))
+                df.loc[df['product'] == product, 'Noun_Strength'] = self.noun_score(data['answer_option'].values).values
             df.to_csv(feature_file,index=False)
             logging.info("Successfully saved the file in {}".format(feature_file))
         except Exception as e:
@@ -180,7 +180,7 @@ if __name__ == '__main__':
         logging.info("\n********************")
         logging.info(f">>>>> stage {STAGE} started <<<<<")
         pre.main(config_path=parsed_args.config)
-        logging.info(f">>>>> stage {STAGE} completed!<<<<<\n")
+        logging.info(f">>>>>> stage {STAGE} completed!<<<<<<\n")
     except Exception as e:
         logging.exception(e)
         raise e

@@ -11,7 +11,7 @@ import boto3
 from io import StringIO
 from src.utils.common import read_yaml,create_directories
 #extracting data
-STAGE = "Stage 01 Extracting Data"
+STAGE = "Stage 01 Extracting Data from S3 Bucket"
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'),
     level=logging.INFO,

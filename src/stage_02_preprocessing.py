@@ -17,7 +17,7 @@ import boto3
 from io import StringIO
 from src.utils.common import read_yaml,create_directories
 from copy import deepcopy
-STAGE = "Stage 02 processing Data"
+STAGE = "Stage 02 Processing Data"
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'),
@@ -191,6 +191,7 @@ class preprocessing:
                     bad_reviews.append(indx)
             logging.info("Step-4 ==> Company Tag Removal Ended")
             df=df[~df.index.isin(bad_reviews)].reset_index(drop=True)
+            print(df.head())
             df.to_csv(file_path,index=False)
             logging.info("Completed all the Stages in preprocessing data was stored in {}".format(file_path))
         except Exception as e:

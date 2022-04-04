@@ -24,7 +24,7 @@ diskcache==5.4.0
 distro==1.7.0
 dpath==2.0.6
 dulwich==0.20.34
-dvc==2.10.0
+dvc==2.9.4
 dvc-render==0.0.4
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0-py3-none-any.whl
 flatten-dict==0.4.2
@@ -83,7 +83,7 @@ ruamel.yaml.clib==0.2.6
 s3transfer==0.5.2
 scikit-learn==1.0.2
 scipy==1.8.0
-scmrepo==0.0.16
+scmrepo==0.0.7
 shortuuid==1.0.8
 shtab==1.5.3
 six==1.16.0
@@ -93,7 +93,7 @@ smmap==5.0.0
 spacy==3.2.3
 spacy-legacy==3.0.9
 spacy-loggers==1.0.1
--e git+https://github.com/dk6304273089/sentiment-analysis.git@f605a0382a60994f7470560955e8ec8b975a2920#egg=src
+-e git+https://github.com/dk6304273089/sentiment-analysis.git@aecce9876f23f1ed6962b067cd4743655d6a17c8#egg=src
 srsly==2.4.2
 tabulate==0.8.9
 text-unidecode==1.3
