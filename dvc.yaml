@@ -32,3 +32,4 @@ stages:
     outs:
       - report/params.json
       - report/scores.json
+      - models/random_forest.joblib

@@ -42,24 +42,20 @@ stages:
     cmd: python src/stage_03_feature_engineering.py --config=configs/config.yaml
     deps:
     - path: configs/config.yaml
-      md5: 076cd0ad7dad1761512a1f4b2b485ba5
-      size: 351
+      md5: 169e368e94d977a49b3de5eafa53a2f5
+      size: 499
     - path: src/DictionaryUtils/service_tagger.txt
       md5: 7b5bb04089f079a0d1d7d5c12e178c67
       size: 607
     - path: src/stage_03_feature_engineering.py
       md5: 830a909531b479f6eb5ed5b278381912
       size: 7299
-    outs:
-    - path: data/feature_processed/feature.csv
-      md5: 5c04f73f176a96d24b07f38ffb9d45dc
-      size: 191976
   preprocessing_data:
     cmd: python src/stage_02_preprocessing.py --config=configs/config.yaml
     deps:
     - path: configs/config.yaml
-      md5: 076cd0ad7dad1761512a1f4b2b485ba5
-      size: 351
+      md5: 169e368e94d977a49b3de5eafa53a2f5
+      size: 499
     - path: src/DictionaryUtils/company_tags.txt
       md5: 1dde0407bf8beb8dc5eede03a6872957
       size: 232
@@ -69,7 +65,28 @@ stages:
     - path: src/stage_02_preprocessing.py
       md5: faee85649765419a4209c275d717a9ad
       size: 9019
+  model_training:
+    cmd: python src/stage_04_model_training.py --config=configs/config.yaml  --params=params.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: 169e368e94d977a49b3de5eafa53a2f5
+      size: 499
+    - path: data/feature_processed/feature.csv
+      md5: 5c04f73f176a96d24b07f38ffb9d45dc
+      size: 191976
+    - path: params.yaml
+      md5: 6c361cff3ec9696aa722bc0b3c27eb00
+      size: 133
+    - path: src/stage_04_model_training.py
+      md5: 741e95a2046ca6d3305b09efa7da0679
+      size: 7146
     outs:
-    - path: data/processed_data/processed.csv
-      md5: 9b26656c15d3b6bc0ac1d6c17b5314ac
-      size: 89658
+    - path: models/random_forest.joblib
+      md5: dcc4dd80bc856469d35d18dd1be05c4e
+      size: 53340491
+    - path: report/params.json
+      md5: 3c47958e0c22f187290a80711de72350
+      size: 96
+    - path: report/scores.json
+      md5: 5850e52b91ddab0b7bf491f59afccff9
+      size: 91

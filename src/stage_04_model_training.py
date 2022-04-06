@@ -1,9 +1,12 @@
+import warnings
+warnings.filterwarnings('ignore')
+warnings.simplefilter('ignore')
 import pandas as pd
 import numpy as np
 from joblib import load, dump
 from copy import deepcopy
 from statistics import mean
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score
 from collections import Counter
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -13,6 +16,7 @@ import argparse
 import json
 from src.utils.common import read_yaml
 import joblib
+
 STAGE = "Stage 04 Model Training"
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'),

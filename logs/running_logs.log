@@ -990,3 +990,251 @@ NameError: name 'score_giver' is not defined
 [2022-04-04 13:55:07,528: INFO: stage_04_model_training]: Successfully saved the rank file in data\feature_processed\rank.csv
 [2022-04-04 13:55:07,556: INFO: stage_04_model_training]: >>>>>> stage Stage 04 Model Training completed!<<<<<<
 
+[2022-04-04 18:12:45,689: INFO: stage_03_feature_engineering]: 
+********************
+[2022-04-04 18:12:45,705: INFO: stage_03_feature_engineering]: >>>>> stage Stage 03 Feature Engineering Step started <<<<<
+[2022-04-04 18:12:45,705: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:12:45,705: INFO: common]: created directory at: data\feature_processed
+[2022-04-04 18:12:45,721: INFO: stage_03_feature_engineering]:  Added New Columns {Noun Strength,Review Polarity,Review Subjectivity,Review Complexity,Service Tagger,Compound Score}
+[2022-04-04 18:14:27,023: INFO: stage_03_feature_engineering]: Successfully saved the file in data\feature_processed\feature.csv
+[2022-04-04 18:14:27,023: INFO: stage_03_feature_engineering]: >>>>>> stage Stage 03 Feature Engineering Step completed!<<<<<<
+
+[2022-04-04 18:14:32,899: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 18:14:32,899: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 18:14:32,899: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 18:14:32,899: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:14:32,899: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 18:14:32,914: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 18:14:34,617: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 18:14:40,121: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 18:14:40,663: INFO: stage_04_model_training]: Successfully saved scores file in  report/scores.json
+[2022-04-04 18:14:40,826: INFO: stage_04_model_training]: Successfully saved model file in models\random_forest.joblib
+[2022-04-04 18:18:39,068: INFO: stage_04_model_training]: Successfully saved the rank file in data\feature_processed\rank.csv
+[2022-04-04 18:18:39,084: INFO: stage_04_model_training]: >>>>>> stage Stage 04 Model Training completed!<<<<<<
+
+[2022-04-04 18:19:50,853: INFO: stage_02_preprocessing]: 
+********************
+[2022-04-04 18:19:50,853: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Processing Data started <<<<<
+[2022-04-04 18:19:50,853: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:19:50,853: INFO: common]: created directory at: data\processed_data
+[2022-04-04 18:19:50,884: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection started
+[2022-04-04 18:20:22,991: INFO: stage_02_preprocessing]: Step-1 ==> Language Detection Ended
+[2022-04-04 18:20:22,991: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Started
+[2022-04-04 18:20:23,555: INFO: stage_02_preprocessing]: Step-2 ==> Gibberish Detection Ended
+[2022-04-04 18:20:23,555: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Started
+[2022-04-04 18:20:24,105: INFO: stage_02_preprocessing]: Step-3 ==> Profanity Detection Ended
+[2022-04-04 18:20:24,105: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Started
+[2022-04-04 18:20:25,039: INFO: stage_02_preprocessing]: Step-4 ==> Company Tag Removal Ended
+[2022-04-04 18:20:25,071: INFO: stage_02_preprocessing]: Completed all the Stages in preprocessing data was stored in data\processed_data\processed.csv
+[2022-04-04 18:20:25,071: INFO: stage_02_preprocessing]: >>>>> stage Stage 02 Processing Data completed!<<<<<
+
+[2022-04-04 18:20:28,475: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 18:20:28,475: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 18:20:28,475: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 18:20:28,475: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:20:28,475: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 18:20:28,491: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 18:20:30,305: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 18:20:36,255: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 18:20:36,898: INFO: stage_04_model_training]: Successfully saved scores file in  report/scores.json
+[2022-04-04 18:20:37,023: INFO: stage_04_model_training]: Successfully saved model file in models\random_forest.joblib
+[2022-04-04 18:24:48,635: INFO: stage_04_model_training]: Successfully saved the rank file in data\feature_processed\rank.csv
+[2022-04-04 18:24:48,666: INFO: stage_04_model_training]: >>>>>> stage Stage 04 Model Training completed!<<<<<<
+
+[2022-04-04 18:25:36,013: INFO: stage_01_get_data]: 
+********************
+[2022-04-04 18:25:36,013: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data from S3 Bucket started <<<<<
+[2022-04-04 18:25:36,013: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:25:36,013: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-04 18:25:36,013: INFO: common]: created directory at: data
+[2022-04-04 18:25:36,013: INFO: common]: created directory at: data\extracted_data
+[2022-04-04 18:25:36,013: INFO: stage_01_get_data]: verifying the credentials
+[2022-04-04 18:26:03,024: INFO: stage_04_model_training]: 
+********************
+[2022-04-04 18:26:03,024: INFO: stage_04_model_training]: >>>>> stage Stage 04 Model Training started <<<<<
+[2022-04-04 18:26:03,024: INFO: stage_04_model_training]: Started 4th Stage
+[2022-04-04 18:26:03,040: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:26:03,040: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-04 18:26:03,040: INFO: stage_04_model_training]: The unique products are ['Accucheck' 'shampoo' 'Becadexamin' 'Neurobion' 'Shelcal' 'Supradyn'
+ 'SevenseascodLiverOil' 'Evion']
+[2022-04-04 18:26:04,854: INFO: stage_04_model_training]: Completed Building Training Data
+[2022-04-04 18:26:10,862: INFO: stage_04_model_training]: Successfully saved parameters file in report/params.json
+[2022-04-04 18:26:11,521: INFO: stage_04_model_training]: Successfully saved scores file in  report/scores.json
+[2022-04-04 18:26:11,679: INFO: stage_04_model_training]: Successfully saved model file in models\random_forest.joblib
+[2022-04-04 18:30:12,518: INFO: stage_04_model_training]: Successfully saved the rank file in data\feature_processed\rank.csv
+[2022-04-04 18:30:12,533: INFO: stage_04_model_training]: >>>>>> stage Stage 04 Model Training completed!<<<<<<
+
+[2022-04-04 18:30:15,153: INFO: stage_01_get_data]: 
+********************
+[2022-04-04 18:30:15,153: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data from S3 Bucket started <<<<<
+[2022-04-04 18:30:15,158: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:30:15,158: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-04 18:30:15,158: INFO: common]: created directory at: data
+[2022-04-04 18:30:15,158: INFO: common]: created directory at: data\extracted_data
+[2022-04-04 18:30:15,158: INFO: stage_01_get_data]: verifying the credentials
+[2022-04-04 18:30:25,000: ERROR: stage_01_get_data]: Could not connect to the endpoint URL: "https://dheeraj-2.s3.amazonaws.com/train.csv"
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\httpsession.py", line 405, in send
+    urllib_response = conn.urlopen(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000019055743700>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 43, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 711, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 731, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 107, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 183, in _send_request
+    while self._needs_retry(attempts, operation_model, request_dict,
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 305, in _needs_retry
+    responses = self._event_emitter.emit(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\hooks.py", line 357, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\hooks.py", line 228, in emit
+    return self._emit(event_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\hooks.py", line 211, in _emit
+    response = handler(**kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 192, in __call__
+    if self._checker(**checker_kwargs):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 265, in __call__
+    should_retry = self._should_retry(attempt_number, response,
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 292, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 331, in __call__
+    checker_response = checker(attempt_number, response,
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 231, in __call__
+    return self._check_caught_exception(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 374, in _check_caught_exception
+    raise caught_exception
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 249, in _do_get_response
+    http_response = self._send(request)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 321, in _send
+    return self.http_session.send(request)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\httpsession.py", line 434, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://dheeraj-2.s3.amazonaws.com/train.csv"
+[2022-04-04 18:30:25,376: ERROR: stage_01_get_data]: Could not connect to the endpoint URL: "https://dheeraj-2.s3.amazonaws.com/train.csv"
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\httpsession.py", line 405, in send
+    urllib_response = conn.urlopen(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000019055743700>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 62, in <module>
+    main(config_path=parsed_args.config,creditionals_path=parsed_args.credentials)
+  File "src/stage_01_get_data.py", line 52, in main
+    raise e
+  File "src/stage_01_get_data.py", line 43, in main
+    csv_obj = client.get_object(Bucket=bucketname, Key=filename)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 395, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 711, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\client.py", line 731, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 107, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 183, in _send_request
+    while self._needs_retry(attempts, operation_model, request_dict,
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 305, in _needs_retry
+    responses = self._event_emitter.emit(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\hooks.py", line 357, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\hooks.py", line 228, in emit
+    return self._emit(event_name, kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\hooks.py", line 211, in _emit
+    response = handler(**kwargs)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 192, in __call__
+    if self._checker(**checker_kwargs):
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 265, in __call__
+    should_retry = self._should_retry(attempt_number, response,
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 292, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 331, in __call__
+    checker_response = checker(attempt_number, response,
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 231, in __call__
+    return self._check_caught_exception(
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\retryhandler.py", line 374, in _check_caught_exception
+    raise caught_exception
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 249, in _do_get_response
+    http_response = self._send(request)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\endpoint.py", line 321, in _send
+    return self.http_session.send(request)
+  File "C:\Users\Dheeraj kumar\anaconda3\envs\sentiment-analysis\lib\site-packages\botocore\httpsession.py", line 434, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://dheeraj-2.s3.amazonaws.com/train.csv"
+[2022-04-04 18:31:58,472: INFO: stage_01_get_data]: 
+********************
+[2022-04-04 18:31:58,472: INFO: stage_01_get_data]: >>>>> stage Stage 01 Extracting Data from S3 Bucket started <<<<<
+[2022-04-04 18:31:58,488: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-04 18:31:58,488: INFO: common]: yaml file: configs/credentials.yaml loaded successfully
+[2022-04-04 18:31:58,488: INFO: common]: created directory at: data
+[2022-04-04 18:31:58,488: INFO: common]: created directory at: data\extracted_data
+[2022-04-04 18:31:58,488: INFO: stage_01_get_data]: verifying the credentials
