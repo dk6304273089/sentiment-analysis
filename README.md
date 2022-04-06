@@ -98,3 +98,23 @@
         secrets.cpython-38.pyc
 
 ```
+DESCRIPTION
+```bash
+-> E-Commerce applications provide an added advantage to customers to buy a product with added suggestions in the form of reviews. Obviously, reviews are useful and impactful for customers who are going to buy the products. But these enormous amounts of reviews also create problems for customers as they are not able to segregate useful ones. Regardless, these immense proportions of reviews make an issue for customers as it becomes very difficult to filter informative reviews. This proportional issue has been attempted in this project. The approach that we discuss in detail later ranks reviews based on their relevance with the product and rank down irrelevant reviews.
+
+-> This work has been done in four phases- data preprocessing/filtering (which includes Language Detection, Gibberish Detection, Profanity Detection), feature extraction, pairwise review ranking, and classification. The outcome will be a list of reviews for a particular product ranking on the basis of relevance using a pairwise ranking approach.
+```
+DATASET
+```bash
+-> Download the dataset for custom training
+-> https://drive.google.com/drive/folders/1_z9MaY3zIqZdnhIifnF8N63wemet8Q2w?usp=sharing
+```
+STEPS-
+```bash
+-> Step 1: Clone the repository
+-> Step 2: Create conda environment
+-> Step 3: Conda activate environment
+-> Step 4: Install the requirements.txt
+-> Step 5: Initializing the dvc
+-> Step 6: Run dvc repro command
+```
